@@ -1,0 +1,22 @@
+<!--pages/top250/top250.wxml-->
+<scroll-view scroll-y="true">
+  <navigator wx:for="{{top250List}}" wx:key="{{item.id}}" url="/pages/detail/detail?id={{item.id}}">
+    <view class='scroll-item'>
+      <image class='poster' src='{{item.images.large}}'></image>
+      <view class='movie-introduce'>
+        <text class='title'>{{item.title}}</text>
+        <text>{{item.original_title}} （{{item.year}}）</text>
+        <view class='director'>
+          导演：
+          <text wx:for="{{item.directors}}" wx:for-item="director" wx:key="{{director.id}}">{{director.name}}</text>
+        </view>
+      </view>
+      <view class='rating'>
+        <text>{{item.rating.average}}</text>
+      </view>
+    </view>
+  </navigator>
+</scroll-view>
+<view class='loading' wx:if="{{loading}}">
+  <text>没有更多内容了！</text>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/indexSwipe/indexSwipe.wxml-->
+<view class='page-body'>
+  <swiper class='page-body-content' indicator-dots='{{true}}'>
+    <block>
+      <swiper-item wx:for='{{movies}}' wx:key='*this'>
+        <image class='poster' src="{{item}}"></image>
+        <button bindtap='start' class='start' wx:if="{{index == movies.length -1}}">立即体验</button>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

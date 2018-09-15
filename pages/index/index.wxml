@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class='page-header-swipe'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='3000'>
+    <block>
+      <swiper-item wx:for="{{theaterList}}" wx:key="{{item.id}}">
+        <image class='headerSwipe' src="{{item.images.small}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='page-body' scroll-y="{{true}}">
+  <view class='page-body-inTheatr'>
+    <navigator url='/pages/theater/theater?city={{city}}'>
+      <view class='page-body-title'>
+        <text class='title'>正在上映的电影 - {{city}}</text>
+        <image class='inTheatr-item' src='../../images/indexSwipe/arrowright.png'></image>
+      </view>
+    </navigator>
+    <scroll-view class='theaterContent' scroll-x="{{true}}">
+      <view class='inner'>
+        <navigator url="/pages/detail/detail?id={{item.id}}" wx:for="{{theaterList}}" wx:key="{{item.id}}">
+          <view class='movie-item'>
+            <image src='{{item.images.large}}' mode='aspectFill'></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='page-body-inTheatr'>
+    <navigator url='/pages/coming/coming'>
+      <view class='page-body-title'>
+        <text class='title'>即将上映的电影</text>
+        <image class='inTheatr-item' src='../../images/indexSwipe/arrowright.png'></image>
+      </view>
+    </navigator>
+    <scroll-view class='theaterContent' scroll-x="{{true}}">
+      <view class='inner'>
+        <navigator url="/pages/detail/detail?id={{item.id}}" wx:for="{{willShowList}}" wx:key="{{item.id}}">
+          <view class='movie-item'>
+            <image src='{{item.images.large}}' mode='aspectFill'></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='page-body-inTheatr'>
+    <navigator url='/pages/topNewMovie/topNewMovie'>
+      <view class='page-body-title'>
+        <text class='title'>豆瓣电影新片榜</text>
+        <image class='inTheatr-item' src='../../images/indexSwipe/arrowright.png'></image>
+      </view>
+    </navigator>
+    <scroll-view class='theaterContent' scroll-x="{{true}}">
+      <view class='inner'>
+        <navigator url="/pages/detail/detail?id={{item.id}}" wx:for="{{newMovie}}" wx:key="{{item.id}}">
+          <view class='movie-item'>
+            <image src='{{item.images.large}}' mode='aspectFill'></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='page-body-inTheatr'>
+    <navigator url='/pages/top250/top250'>
+      <view class='page-body-title'>
+        <text class='title'>豆瓣电影Top250</text>
+        <image class='inTheatr-item' src='../../images/indexSwipe/arrowright.png'></image>
+      </view>
+    </navigator>
+    <scroll-view class='theaterContent' scroll-x="{{true}}">
+      <view class='inner'>
+        <navigator url="/pages/detail/detail?id={{item.id}}" wx:for="{{movieTop}}" wx:key="{{item.id}}">
+          <view class='movie-item'>
+            <image src='{{item.images.large}}' mode='aspectFill'></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

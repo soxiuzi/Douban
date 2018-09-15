@@ -1,0 +1,30 @@
+/* pages/indexSwipe/indexSwipe.wxss */
+page {
+  height: 100%;
+}
+.page-body {
+  height: 100%;
+}
+.page-body-content {
+  height: 100%;
+  display: flex;
+}
+.page-body-content swipe-item {
+  flex: 1
+}
+.poster {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: .9;
+}
+.start {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-left: -122rpx;
+  padding: 0 60rpx;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 45rpx;
+  color: white;
+}

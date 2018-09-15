@@ -1,0 +1,25 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <image wx:if="{{ movieInfo.images.large }}" class="background" src="{{ movieInfo.images.large }}" mode="aspectFill"/>
+  <view class='movie-posterInfo'>
+    <image class='poster' src='{{movieInfo.images.large}}' mode='aspectFit'></image>
+    <view class='movie-title'>
+      <text>{{movieInfo.title}}（{{movieInfo.year}}）</text>
+    </view>
+    <view class='movie-rating'>评分：{{movieInfo.rating.average}}</view>
+    <view class='movie-director'>
+      导演：
+      <text wx:for="{{movieInfo.directors}}" wx:for-item="director" wx:key="{{director.id}}">{{director.name}}</text>
+    </view>
+    <view class='movie-cast'>
+      <text class='mainActor'>主演：</text>
+      <text wx:for="{{movieInfo.casts}}" wx:for-item="actor" wx:key="{{actor.id}}">{{actor.name}}  </text>  
+    </view>
+  </view>
+  <view class='movie-abstract'>
+    摘要：
+    <view class='summary'>
+      <text>{{movieInfo.summary}}</text>
+    </view> 
+  </view>
+</view>

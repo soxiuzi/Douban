@@ -1,0 +1,40 @@
+{
+  "pages": [    
+    "pages/index/index",
+    "pages/theater/theater",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/profile/profile",    
+    "pages/coming/coming",
+    "pages/topNewMovie/topNewMovie",
+    "pages/top250/top250"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0000FF",
+    "navigationBarTitleText": "电影 « 豆瓣",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "榜单",
+        "iconPath": "images/tabBar/home.png",
+        "selectedIconPath": "images/tabBar/home_active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "电影搜索",
+        "iconPath": "images/tabBar/search.png",
+        "selectedIconPath": "images/tabBar/search_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tabBar/about.png",
+        "selectedIconPath": "images/tabBar/about_active.png"
+      }
+    ]
+  }
+}

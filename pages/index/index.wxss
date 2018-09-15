@@ -1,0 +1,50 @@
+.headerSwipe {
+  width: 100%;
+  background-color: #f8f9fb;
+  height: 100%;
+}
+.page-header-swipe swiper {
+  padding-bottom: 40rpx; 
+  height: 600rpx;
+}
+.page-body-inTheatr {
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx 0;
+}
+.page-body-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+.page-body-title image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.theaterContent {
+  height: 300rpx;
+}
+.theaterContent .inner {
+  display: flex;
+  flex-direction: row;
+  width: 300rpx;
+  height: 900rpx;
+}
+.theaterContent .movie-item {
+  display: flex;
+  flex-direction: column;
+  width: 180rpx;
+  margin: 10rpx;
+}
+.theaterContent .movie-item image {
+  width: 180rpx;
+  height: 250rpx;
+}
+.theaterContent .movie-item text {
+  text-align: center;
+  font-size: 20rpx;
+}
